@@ -19,18 +19,6 @@ image = Image.open('car_img.jpg')
 st.image(image, caption='A red car', width=300)
 
 
-'''Buraya ne yazsam cikmiyor...  <br>
-                        Python code yazmam lazim.'''
-
-['Year',
- 'Present_Price',
- 'Kms_Driven',
- 'Owner',
- 'Fuel_Type_Diesel',
- 'Fuel_Type_Petrol',
- 'Seller_Type_Individual',
- 'Transmission_Manual']
-
 # Year
 year = st.number_input("Year", min_value=2014, max_value=2023, value=2019, step=1)
 
@@ -75,11 +63,11 @@ df_s = pd.DataFrame(user_input)
 df_s["Year"] = 2023-df_s["Year"]
 df_s = pd.get_dummies(df_s).reindex(columns=columns, fill_value=0)
 
-st.write('Columns from file:')
-st.write(columns)
+# st.write('Columns from file:')
+# st.write(columns)
 
-st.write('df_s:')
-st.write(df_s.columns)
+# st.write('df_s:')
+# st.write(df_s.columns)
 
 
 #load model and scaler
